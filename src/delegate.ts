@@ -9,9 +9,7 @@ export function delegateToPnpm(args: string[]) {
         writeVersion(version);
     }
 
-    console.log(`used version - ${version}`);
+    const installedVersion = installPnpmIfNotInstalled(version);
 
-    installPnpmIfNotInstalled(version);
-
-    runPnpm(version, args);
+    runPnpm(installedVersion, args);
 }

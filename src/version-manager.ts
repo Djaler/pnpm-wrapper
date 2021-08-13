@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import semver from 'semver';
 
 const versionFile = path.join(process.cwd(), 'pnpm.version');
 
@@ -21,5 +22,5 @@ export function writeVersion(version: string) {
 }
 
 export function isVersionValid(version: string) {
-    return !!(/^\d+\.\d+\.\d+$/.exec(version));
+    return semver.validRange(version) !== null;
 }

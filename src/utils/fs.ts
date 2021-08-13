@@ -34,3 +34,8 @@ export function copyDirectoryRecursive(src: string, dest: string) {
         }
     }
 }
+
+export function listSubdirectories(dir: string) {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    return entries.filter(entry => entry.isDirectory());
+}

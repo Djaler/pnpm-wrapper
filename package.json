@@ -28,10 +28,14 @@
     "pnpm-wrapper": "bin/pnpm-wrapper.js",
     "pnpmw": "bin/pnpm-wrapper.js"
   },
+  "dependencies": {
+    "semver": "7.3.5"
+  },
   "devDependencies": {
     "@djaler/conventional-changelog-standard": "1.2.0",
     "@djaler/eslint-config-typescript": "0.0.6",
     "@types/node": "14.17.9",
+    "@types/semver": "7.3.8",
     "@zerollup/ts-transform-paths": "1.7.18",
     "clean-publish": "2.2.0",
     "conventional-github-releaser": "3.1.5",
