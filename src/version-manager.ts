@@ -12,10 +12,7 @@ function getVersionFromFile() {
 
     let version = fs.readFileSync(versionFile, 'utf-8');
     version = version.trim();
-    if (!isVersionValid(version)) {
-        throw new Error(`Expected a valid version in pnpm.version, got "${version}" instead`);
-    }
-    return version;
+    return new semver.Range(version);
 }
 
 function getVersionFromEngines() {
@@ -25,7 +22,12 @@ function getVersionFromEngines() {
 
     const packageJson = JSON.parse(fs.readFileSync(packageJsonFile, 'utf-8'));
 
-    return (packageJson.engines?.pnpm ?? null) as string | null;
+    const enginesPnpm = packageJson.engines?.pnpm;
+    if (!enginesPnpm) {
+        return null;
+    }
+
+    return new semver.Range(enginesPnpm);
 }
 
 export function getRequiredVersion() {
@@ -33,10 +35,6 @@ export function getRequiredVersion() {
         || getVersionFromEngines();
 }
 
-export function writeVersion(version: string) {
-    fs.writeFileSync(versionFile, version);
-}
-
-export function isVersionValid(version: string) {
-    return semver.validRange(version) !== null;
+export function writeVersion(version: semver.SemVer) {
+    fs.writeFileSync(versionFile, version.version);
 }
