@@ -1,0 +1,51 @@
+{
+  "name": "pnpm-wrapper",
+  "version": "0.0.1",
+  "author": "Kirill Romanov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Djaler/pnpm-wrapper"
+  },
+  "keywords": [
+    "pnpm"
+  ],
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "build": "rimraf dist && tsc",
+    "prerelease": "npm run lint && npm run build",
+    "release": "standard-version --preset @djaler/standard",
+    "release:github": "conventional-github-releaser --preset @djaler/standard",
+    "publish": "npm run build && clean-publish"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "bin": {
+    "pnpm-wrapper": "bin/pnpm-wrapper.js",
+    "pnpmw": "bin/pnpm-wrapper.js"
+  },
+  "devDependencies": {
+    "@djaler/conventional-changelog-standard": "1.2.0",
+    "@djaler/eslint-config-typescript": "0.0.6",
+    "@types/node": "14.17.9",
+    "clean-publish": "2.2.0",
+    "conventional-github-releaser": "3.1.5",
+    "eslint": "7.32.0",
+    "eslint-import-resolver-typescript": "2.4.0",
+    "lint-staged": "11.1.2",
+    "rimraf": "3.0.2",
+    "simple-git-hooks": "2.5.1",
+    "standard-version": "9.3.1",
+    "typescript": "4.3.5"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --fix"
+  }
+}
