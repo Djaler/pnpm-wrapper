@@ -4,6 +4,7 @@ specifiers:
   '@djaler/conventional-changelog-standard': 1.2.0
   '@djaler/eslint-config-typescript': 0.0.6
   '@types/node': 14.17.9
+  '@zerollup/ts-transform-paths': 1.7.18
   clean-publish: 2.2.0
   conventional-github-releaser: 3.1.5
   eslint: 7.32.0
@@ -12,12 +13,14 @@ specifiers:
   rimraf: 3.0.2
   simple-git-hooks: 2.5.1
   standard-version: 9.3.1
+  ttypescript: 1.5.12
   typescript: 4.3.5
 
 devDependencies:
   '@djaler/conventional-changelog-standard': 1.2.0
   '@djaler/eslint-config-typescript': 0.0.6_eslint@7.32.0+typescript@4.3.5
   '@types/node': 14.17.9
+  '@zerollup/ts-transform-paths': 1.7.18_typescript@4.3.5
   clean-publish: 2.2.0
   conventional-github-releaser: 3.1.5
   eslint: 7.32.0
@@ -26,6 +29,7 @@ devDependencies:
   rimraf: 3.0.2
   simple-git-hooks: 2.5.1
   standard-version: 9.3.1
+  ttypescript: 1.5.12_typescript@4.3.5
   typescript: 4.3.5
 
 packages:
@@ -275,6 +279,24 @@ packages:
     dependencies:
       '@typescript-eslint/types': 4.29.1
       eslint-visitor-keys: 2.1.0
+    dev: true
+
+  /@zerollup/ts-helpers/1.7.18_typescript@4.3.5:
+    resolution: {integrity: sha512-S9zN+y+i5yN/evfWquzSO3lubqPXIsPQf6p9OiPMpRxDx/0totPLF39XoRw48Dav5dSvbIE8D2eAPpXXJxvKwg==}
+    peerDependencies:
+      typescript: '>=3.7.2'
+    dependencies:
+      resolve: 1.20.0
+      typescript: 4.3.5
+    dev: true
+
+  /@zerollup/ts-transform-paths/1.7.18_typescript@4.3.5:
+    resolution: {integrity: sha512-YPVUxvWQVzRx1OBN0Pmkd58+R9FcfUJuwTaPUSoi5rKxuXMtxevTXdfi0w5mEaIH8b0DfL+wg0wFDHiJE+S2zA==}
+    peerDependencies:
+      typescript: '>=3.7.2'
+    dependencies:
+      '@zerollup/ts-helpers': 1.7.18_typescript@4.3.5
+      typescript: 4.3.5
     dev: true
 
   /JSONStream/1.3.5:
@@ -3378,6 +3400,17 @@ packages:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
     dependencies:
       tslib: 1.14.1
+      typescript: 4.3.5
+    dev: true
+
+  /ttypescript/1.5.12_typescript@4.3.5:
+    resolution: {integrity: sha512-1ojRyJvpnmgN9kIHmUnQPlEV1gq+VVsxVYjk/NfvMlHSmYxjK5hEvOOU2MQASrbekTUiUM7pR/nXeCc8bzvMOQ==}
+    hasBin: true
+    peerDependencies:
+      ts-node: '>=8.0.2'
+      typescript: '>=3.2.2'
+    dependencies:
+      resolve: 1.20.0
       typescript: 4.3.5
     dev: true
 
