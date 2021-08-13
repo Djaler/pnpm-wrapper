@@ -7,7 +7,7 @@ const args = process.argv.slice(2);
 
 switch (args[0]) {
     case 'use': {
-        useVersion(new semver.Range(args[1]));
+        useVersion(new semver.Range(args.slice(1).join(' ')));
         break;
     }
     default: {

@@ -5,13 +5,18 @@ import path from 'path';
 import semver from 'semver';
 
 import { copyDirectoryRecursive, listSubdirectories, removeDirectoryRecursive } from '@/utils/fs';
-import { installPackage } from '@/utils/npm';
+import { getMaxPackageVersionForRangeOrThrow, installPackage } from '@/utils/npm';
 
 const wrappersDir = path.join(os.homedir(), '.pnpm-wrapper');
 
 function installPnpm(version: semver.SemVer | semver.Range) {
     const installDir = path.join(wrappersDir, 'tmp');
-    installPackage('pnpm', version, installDir);
+    if (version instanceof semver.SemVer) {
+        installPackage('pnpm', version, installDir);
+    } else {
+        const versionForRange = getMaxPackageVersionForRangeOrThrow('pnpm', version);
+        installPackage('pnpm', versionForRange, installDir);
+    }
 
     const packageJson = JSON.parse(fs.readFileSync(path.join(installDir, 'node_modules', 'pnpm', 'package.json'), 'utf-8'));
     const installedVersion = packageJson.version as string;
