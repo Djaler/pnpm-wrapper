@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/Djaler/pnpm-wrapper/compare/v0.1.0...v0.1.1) (2021-08-15)
+
+
+### Improvements
+
+* log installed pnpm version ([e9bb8cd](https://github.com/Djaler/pnpm-wrapper/commit/e9bb8cd0306ab3910a628c05dae8fb14f92e85b6))
+
 ## [0.1.0](https://github.com/Djaler/pnpm-wrapper/compare/v0.0.2...v0.1.0) (2021-08-14)
 
 
