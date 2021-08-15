@@ -10,9 +10,7 @@ function getVersionFromFile() {
         return null;
     }
 
-    let version = fs.readFileSync(versionFile, 'utf-8');
-    version = version.trim();
-    return new semver.Range(version);
+    return new semver.Range(fs.readFileSync(versionFile, 'utf-8'));
 }
 
 function getVersionFromEngines() {
