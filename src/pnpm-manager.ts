@@ -24,6 +24,8 @@ function installPnpm(version: semver.SemVer | semver.Range) {
     copyDirectoryRecursive(path.join(installDir, 'node_modules', 'pnpm'), path.join(wrappersDir, installedVersion));
     removeDirectoryRecursive(installDir);
 
+    console.log(`pnpm@${installedVersion} is installed`);
+
     return new semver.SemVer(installedVersion);
 }
 
