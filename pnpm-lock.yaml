@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@djaler/conventional-changelog-standard': 1.2.0
-  '@djaler/eslint-config-typescript': 0.0.6
+  '@djaler/eslint-config-typescript': 0.0.7
   '@types/node': 14.17.9
   '@types/semver': 7.3.8
   '@zerollup/ts-transform-paths': 1.7.18
@@ -23,7 +23,7 @@ dependencies:
 
 devDependencies:
   '@djaler/conventional-changelog-standard': 1.2.0
-  '@djaler/eslint-config-typescript': 0.0.6_eslint@7.32.0+typescript@4.3.5
+  '@djaler/eslint-config-typescript': 0.0.7_eslint@7.32.0+typescript@4.3.5
   '@types/node': 14.17.9
   '@types/semver': 7.3.8
   '@zerollup/ts-transform-paths': 1.7.18_typescript@4.3.5
@@ -73,8 +73,8 @@ packages:
       conventional-changelog-conventionalcommits: 4.5.0
     dev: true
 
-  /@djaler/eslint-config-base/0.0.3_eslint@7.32.0:
-    resolution: {integrity: sha512-1aAj+X7yOPia43pRGUUpi5CEBtyF3a6hI+cNr3JfXIaGhEZNHJaqdfIm+W1wHUcppp31gZ5/HPaakbhicOTPYA==}
+  /@djaler/eslint-config-base/0.0.4_eslint@7.32.0:
+    resolution: {integrity: sha512-NIHMQSgHAyCDrEkq5BqJ9qlynOiVVhhNluQj6V4urUQxJvGPgZWhrkUwDzx6IF9F4AvFiDLiW/VYf0WNQ+0s2w==}
     dependencies:
       eslint-config-airbnb-base: 14.2.1_44936d22002d8391d694a30a93d20642
       eslint-plugin-import: 2.24.0_eslint@7.32.0
@@ -83,10 +83,10 @@ packages:
       - eslint
     dev: true
 
-  /@djaler/eslint-config-typescript/0.0.6_eslint@7.32.0+typescript@4.3.5:
-    resolution: {integrity: sha512-jWI/7LP463FIDhJvjMnmWJaeTeE1DlnAqJPpDhr8WPy6M1TekmWtbTILmggStcdXUkllC8WNVNgOI80GJobpdA==}
+  /@djaler/eslint-config-typescript/0.0.7_eslint@7.32.0+typescript@4.3.5:
+    resolution: {integrity: sha512-UKN/6cSZp77ssqm/yuSp2SIZWlA8ooLqaDlKmhRdX7YilFLqAkiyEZY19RGT7HGemJzaM9Af9nZg2ZOEpBIQSg==}
     dependencies:
-      '@djaler/eslint-config-base': 0.0.3_eslint@7.32.0
+      '@djaler/eslint-config-base': 0.0.4_eslint@7.32.0
       '@typescript-eslint/eslint-plugin': 4.29.1_eslint@7.32.0+typescript@4.3.5
       eslint-config-airbnb-typescript: 12.3.1_eslint@7.32.0+typescript@4.3.5
     transitivePeerDependencies:
