@@ -41,7 +41,7 @@
     "conventional-github-releaser": "3.1.5",
     "eslint": "7.32.0",
     "eslint-import-resolver-typescript": "2.4.0",
-    "lint-staged": "11.1.2",
+    "lint-staged": "11.2.0",
     "rimraf": "3.0.2",
     "simple-git-hooks": "2.5.1",
     "standard-version": "9.3.1",
