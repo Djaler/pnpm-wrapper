@@ -37,7 +37,7 @@
     "@types/node": "14.17.9",
     "@types/semver": "7.3.8",
     "@zerollup/ts-transform-paths": "1.7.18",
-    "clean-publish": "2.2.0",
+    "clean-publish": "3.2.0",
     "conventional-github-releaser": "3.1.5",
     "eslint": "7.32.0",
     "eslint-import-resolver-typescript": "2.4.0",

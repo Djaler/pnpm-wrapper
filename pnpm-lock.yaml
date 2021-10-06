@@ -6,7 +6,7 @@ specifiers:
   '@types/node': 14.17.9
   '@types/semver': 7.3.8
   '@zerollup/ts-transform-paths': 1.7.18
-  clean-publish: 2.2.0
+  clean-publish: 3.2.0
   conventional-github-releaser: 3.1.5
   eslint: 7.32.0
   eslint-import-resolver-typescript: 2.4.0
@@ -27,7 +27,7 @@ devDependencies:
   '@types/node': 14.17.9
   '@types/semver': 7.3.8
   '@zerollup/ts-transform-paths': 1.7.18_typescript@4.3.5
-  clean-publish: 2.2.0
+  clean-publish: 3.2.0
   conventional-github-releaser: 3.1.5
   eslint: 7.32.0
   eslint-import-resolver-typescript: 2.4.0_eslint@7.32.0
@@ -442,11 +442,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /at-least-node/1.0.0:
-    resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
-    engines: {node: '>= 4.0.0'}
-    dev: true
-
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
     dev: true
@@ -551,13 +546,14 @@ packages:
       supports-color: 7.2.0
     dev: true
 
-  /clean-publish/2.2.0:
-    resolution: {integrity: sha512-U+/Y5YXbxnqWlh8y/toKSEGbMvIvsgfkfJ7yK0v0uQ1mz07lNNSxceY7XaFweEw8LFQo8Al3H7SuQHXbf5Xw8g==}
-    engines: {node: ^10.17.0 || ^12.0.0 || >=14.0.0}
+  /clean-publish/3.2.0:
+    resolution: {integrity: sha512-0KWS7/bJ3Bl/m/9bHDhitRjR6r8oZgZVL/opRBgSuqfdCII+OAFneJZ5UN6lAmetww6ASgEyKtS/q3Inj7R5HQ==}
+    engines: {node: ^12.0.0 || ^14.0.0 || >= 16.0.0}
     hasBin: true
     dependencies:
       cross-spawn: 7.0.3
-      fs-extra: 9.1.0
+      fast-glob: 3.2.7
+      fs-extra: 10.0.0
       lilconfig: 2.0.3
     dev: true
 
@@ -1522,11 +1518,10 @@ packages:
       null-check: 1.0.0
     dev: true
 
-  /fs-extra/9.1.0:
-    resolution: {integrity: sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==}
-    engines: {node: '>=10'}
+  /fs-extra/10.0.0:
+    resolution: {integrity: sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==}
+    engines: {node: '>=12'}
     dependencies:
-      at-least-node: 1.0.0
       graceful-fs: 4.2.8
       jsonfile: 6.1.0
       universalify: 2.0.0
@@ -3473,6 +3468,7 @@ packages:
     resolution: {integrity: sha512-JhS3hmcVaXlp/xSo3PKY5R0JqKs5M3IV+exdLHW99qKvKivPO4Z8qbej6mte17SOPqAOVMjt/XGgWacnFSzM3g==}
     engines: {node: '>=0.8.0'}
     hasBin: true
+    requiresBuild: true
     dev: true
     optional: true
 
